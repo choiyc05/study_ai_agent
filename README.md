@@ -12,4 +12,16 @@ app2 - naver뉴스 crawling
 app3 - melon 장르별 50곡 crawling
 ```
 
-
+- 3월 4일 (수요일)
+```bash
+- streamlit // study42
+1교시 - streamlit 기본 설정 살펴 보기
+/pages/
+page1.py - melon 장르별 50곡 streamlit 통해 간단한 ui 만들어 크롤링 연습
+page2.py - streamlit, altair , vega_datasets(덤프 데이터), numpy.random(난수) 데이터로 차트 그리기 연습, 예시
+page3.py - 사이트에서 가져와 데이터 정돈 / 기간 정해 데이터 출력
+page4.py - 위키백과 수집 / html, json, dataframe 출력
+page5.py - 뉴스기사 요약 / gpt로 기사 (영어) 번역해보기
+page6.py - ollama - `GPT-OSS:20b`모델로 대화해보기 (서버는 서브pc)
+page7.py - ollama / gemma3:4b로 ai모델과 채팅(답변 실시간)
+```
