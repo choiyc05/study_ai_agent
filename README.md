@@ -25,3 +25,11 @@ page5.py - 뉴스기사 요약 / gpt로 기사 (영어) 번역해보기
 page6.py - ollama - `GPT-OSS:20b`모델로 대화해보기 (서버는 서브pc)
 page7.py - ollama / gemma3:4b로 ai모델과 채팅(답변 실시간)
 ```
+
+- 3월 5일 (목요일)
+```bash
+- study43
+1_yes24.py
+2_interpark.py - 특이하게 api 호출 식으로 정보가 와서 이용 가능
+3_daily.py -
+```
