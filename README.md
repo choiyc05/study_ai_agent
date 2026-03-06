@@ -31,5 +31,18 @@ page7.py - ollama / gemma3:4b로 ai모델과 채팅(답변 실시간)
 - study43
 1_yes24.py
 2_interpark.py - 특이하게 api 호출 식으로 정보가 와서 이용 가능
-3_daily.py -
+3_daily.py - 티켓 링크
+
+오후 시간은 
+https://github.com/HighGooh/0305streamlit 자유롭게 배운 것들 활용하여 데이터 수집, 차트 그리기
+```
+
+- 3월 6일 (일요일)
+```bash
+https://github.com/HighGooh/0305streamlit
+오전 - 추가로 작업
+오후 - 5,6,7 교시 발표
+
+
+
 ```
