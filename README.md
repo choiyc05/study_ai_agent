@@ -45,5 +45,13 @@ https://github.com/HighGooh/0305streamlit
 
 기상청 크롤링
 study44 - 강사님 예시 코드 -> 자율 숙제 : 활용해서 차트 등 배운 내용 활용해보기
+```
+
+- 3월 9일 (월요일)
+```bash
+DB -> DB, OLTP, OLAP
+study45 - main.py etl1~5 db_air => db_to_air db이관 연습
+study45 - etl6, jobs // data이관, 로그 남기기
+study45_2 - fastapi(또는 streamlit도 상관 없음) 통해 useYn 변경 기능 / 리스트 불러오기 / 적재까지 간단하게 서비스 할 준비 해보기
 
 ```
