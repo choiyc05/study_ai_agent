@@ -52,6 +52,12 @@ study44 - 강사님 예시 코드 -> 자율 숙제 : 활용해서 차트 등 배
 DB -> DB, OLTP, OLAP
 study45 - main.py etl1~5 db_air => db_to_air db이관 연습
 study45 - etl6, jobs // data이관, 로그 남기기
-study45_2 - fastapi(또는 streamlit도 상관 없음) 통해 useYn 변경 기능 / 리스트 불러오기 / 적재까지 간단하게 서비스 할 준비 해보기
+study45_2 - fastapi(또는 streamlit도 상관 없음) 통해 useYn 변경 기능 / 리스트 불러오기 / 적재까지 간단하게 서비스 할 준비/계획 해보기
+```
+- 3월 10일 (화요일)
+```bash
+study45/45_2 - 발표 / 차트만들 table 만들 계획
+
+오후 2시~4시 stk b2b 테크 웨비나
 
 ```
