@@ -69,6 +69,14 @@ n8n - discord 봇 /aouth2 / ai agent ollama연결
 
 - 3월 12일 (목요일)
 ```bash
-study1~7 - n8n 기초 / OAuth 인증 Discord, github, google sheets, drive 등
+study1~7 - n8n 기초 / ai agent + postgres, OAuth 인증 Discord, github, google sheets, drive 등
 발표 준비
+```
+
+- 3월 13일 (금요일)
+```bash
+n8n복습 / 발표
+hugging face / colab
+n8n 학습
+숙제: n8n + react (study3 discord에서 react(웹)으로 바꿔서 구동해보기)
 ```

@@ -64,3 +64,38 @@ GROUP BY
 	a.`년도`, a.`월`, b.`설명` 
 ORDER BY
 	a.`년도`, a.`월`, b.`설명`;
+
+---
+
+-- 예시
+SELECT a.`항공사코드`, c.`설명`, COUNT(*) AS cnt 
+FROM db_air.`비행` a
+INNER JOIN db_air.`운반대` c
+ON (a.`항공사코드` = c.`코드`)
+WHERE a.`비행취소여부` = 0
+GROUP BY a.`항공사코드`, c.`설명`
+ORDER BY 3 DESC
+LIMIT 5;
+
+SELECT a.`출발공항코드`, air.`도시`, COUNT(*) AS cnt
+FROM db_air.`비행` a
+INNER JOIN db_air.`항공사` air
+ON (a.`출발공항코드` = air.`항공사코드`)
+WHERE a.`비행취소여부` = 0
+GROUP BY a.`출발공항코드`, air.`도시` 
+ORDER BY 3 DESC
+LIMIT 5;
+
+SELECT a.`년도`, air.`도시`, COUNT(*) AS cnt 
+FROM db_air.`비행` a
+INNER JOIN db_air.`항공사` air
+ON (a.`도착지공항코드` = air.`항공사코드`)
+INNER JOIN db_air.`요일` w
+ON (a.`요일` = w.`코드`)
+WHERE a.`비행취소여부` = 0
+AND a.`출발공항코드` = 'ORD'
+AND a.`년도`=1988
+GROUP BY w.`코드`, air.`도시`
+ORDER BY 3 DESC
+LIMIT 5;
+
