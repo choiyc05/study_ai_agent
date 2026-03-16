@@ -80,3 +80,10 @@ hugging face / colab
 n8n 학습
 숙제: n8n + react (study3 discord에서 react(웹)으로 바꿔서 구동해보기)
 ```
+
+- 3월 16일 (월요일)
+```bash
+apache/spark 설치
+jupiter에서 또는 vscode에서 test1.ipynb
+study48 - app1, app2 jupyter로 spark 학습 study1,2
+```
