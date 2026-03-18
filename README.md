@@ -87,3 +87,10 @@ apache/spark 설치
 jupiter에서 또는 vscode에서 test1.ipynb
 study48 - app1, app2 jupyter로 spark 학습 study1,2
 ```
+
+ - 3월 17일 (화요일)
+ ```bash
+seoul_metro db에 넣기 (sql문)
+py에서 넣기
+0317metro - sql문들 / 사용자정의함수,프로시저 등 학습
+ ```
