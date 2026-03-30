@@ -1,13 +1,13 @@
-DROP TABLE edu.`seoul_metro`;
-TRUNCATE TABLE edu.`seoul_metro`;
+DROP TABLE `metro_db`.`seoul_metro`;
+TRUNCATE TABLE `metro_db`.`seoul_metro`;
 
-CREATE TABLE `seoul_metro` (
-	`날짜` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`역번호` INT(11) NULL DEFAULT NULL,
-	`역명` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`구분` VARCHAR(4) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`05~06` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`06~07` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
+CREATE TABLE `test`.`seoul_metro` (
+	`날짜` VARCHAR(20),
+	`역번호` INT(10),
+	`역명` VARCHAR(20),
+	`구분` VARCHAR(3),
+	`05~06` VARCHAR(10),
+	`06~07` VARCHAR(10) ,
 	`07~08` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
 	`08~09` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
 	`09~10` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
@@ -25,10 +25,9 @@ CREATE TABLE `seoul_metro` (
 	`21~22` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
 	`22~23` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
 	`23~24` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`24~` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci'
+	`24~25` VARCHAR(10) NULL DEFAULT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
+	`합계` VARCHAR(10)
 )
-COLLATE='utf8mb4_uca1400_ai_ci'
-ENGINE=INNODB
 ;
 
 LOAD DATA LOCAL INFILE 'D:\\IDE\\Study\\subway\\2008.csv'
