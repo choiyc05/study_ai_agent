@@ -89,8 +89,14 @@ study48 - app1, app2 jupyter로 spark 학습 study1,2
 ```
 
  - 3월 17일 (화요일)
- ```bash
+```bash
 seoul_metro db에 넣기 (sql문)
 py에서 넣기
 0317metro - sql문들 / 사용자정의함수,프로시저 등 학습
- ```
+```
+
+ - 3월 18일 (수요일)
+```bash
+metro db 분석 / 시각화
+
+```
