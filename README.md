@@ -107,3 +107,15 @@ metro db 분석 / 시각화
 주요 특징 및 역할
 AI에서 필요한 이유
  ```
+
+ - 3월 30일 (월요일)
+ ```bash
+숙제 발표 : 온톨로지
+참고 : 에이전틱 AI의 마지막 퍼즐, 온톨로지! (Full ver.) - YouTube (https://www.youtube.com/watch?v=9kldcOTOx7g), knowledge graph(https://www.youtube.com/@gongwon-nayeon)
+Hugging Face : vllm, kanana 맛보기
+
+Study50 : ollama - gemma3:4b를 python으로 사용해보기
+python + Neo4j
+study50 - app : 귀멸의칼날시즌1,2,3,4 위키피디아 크롤링 및 ai agent로 관계도 정리
+0331에 포켓몬스터 위키피디아로 실습
+ ```
