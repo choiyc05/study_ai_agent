@@ -119,3 +119,13 @@ python + Neo4j
 study50 - app : 귀멸의칼날시즌1,2,3,4 위키피디아 크롤링 및 ai agent로 관계도 정리
 0331에 포켓몬스터 위키피디아로 실습
  ```
+
+ - 3월 31일 (화요일)
+```bash
+HighGooh - 0331_AI_GDBMS : wikipedia crawling연습
+```
+
+ - 4월 1일 (수요일)
+```bash
+
+```
