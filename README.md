@@ -127,5 +127,5 @@ HighGooh - 0331_AI_GDBMS : wikipedia crawling연습
 
  - 4월 1일 (수요일)
 ```bash
-
+study51 - 데이터 전처리
 ```
