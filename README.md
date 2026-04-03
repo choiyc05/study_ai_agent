@@ -135,3 +135,8 @@ study52 -
 study53 - embedding
 study54 - 해리포터 임베딩 학습
 ```
+
+ - 4월 3일 (금요일)
+```bash
+
+```
