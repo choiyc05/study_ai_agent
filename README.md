@@ -127,5 +127,11 @@ HighGooh - 0331_AI_GDBMS : wikipedia crawling연습
 
  - 4월 1일 (수요일)
 ```bash
-study51 - 데이터 전처리
+study51 - 데이터 전처리 8단계 / 연습
+```
+ - 4월 2일 (목요일)
+```bash
+study52 - 
+study53 - embedding
+study54 - 해리포터 임베딩 학습
 ```
