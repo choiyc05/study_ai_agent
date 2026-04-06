@@ -138,5 +138,14 @@ study54 - 해리포터 임베딩 학습
 
  - 4월 3일 (금요일)
 ```bash
+study54_2
+```
 
+ - 4월 6일 (월요일)
+```bash
+주말 숙제 - AI Agent Protocol은 무엇인가? 발표
+MCP, A2A, 하네스 엔지니어링 등등
+
+study55 - LLM ( RAG / Fine Tuning ) 느려서 colab으로 진행
+study56 - mcp맛보기
 ```
