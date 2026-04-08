@@ -149,3 +149,8 @@ MCP, A2A, 하네스 엔지니어링 등등
 study55 - LLM ( RAG / Fine Tuning ) 느려서 colab으로 진행
 study56 - mcp맛보기
 ```
+
+ - 4월 8일 (수요일)
+```bash
+study57 - langchain, langgraph 알아보기
+```
