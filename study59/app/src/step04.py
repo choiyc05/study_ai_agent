@@ -9,7 +9,7 @@ from langchain_core.messages import AIMessage
 import re
 
 # 1. 모델 설정
-model_name: str = "gemma4:e4b"
+model_name: str = "gemma3:4b"
 llm = ChatOllama(
   model=model_name, 
   base_url=settings.ollama_base_url,

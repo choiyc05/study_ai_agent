@@ -3,7 +3,8 @@ from settings import settings
 from langchain_ollama import ChatOllama
 
 # 1. 모델 설정
-model_name: str = "gemma4:e4b"
+# model_name: str = "gemma4:e4b"
+model_name: str = "gemma3:4b"
 
 # ChatOllama: Ollama를 통해 실행되는 챗 모델 인터페이스
 llm = ChatOllama(
@@ -36,7 +37,7 @@ def run():
     
     # 4. 모델 호출 및 처리
     # 타이타닉에 대한 긴 설명을 요청하더라도, 모델은 MovieResponse 형식에 맞는 데이터만 추출합니다.
-    response = structured_llm.invoke("타이타닉 영화에 대해 설명해주세요.")
+    response = structured_llm.invoke("어벤져스:엔드게임 영화에 대해 설명해주세요.")
     
     # 5. 결과 출력
     # response는 더 이상 단순 문자열이 아니라 MovieResponse 인스턴스(객체)입니다.
