@@ -1,0 +1,32 @@
+services:
+  mariadb:
+    image: mariadb:12.1.2
+    container_name: mariadb
+    restart: always
+    environment:
+      - MARIADB_HOST=localhost
+      - MARIADB_PORT=3306
+      - MARIADB_ROOT_PASSWORD=1234
+      - MARIADB_DATABASE=edu
+      - TZ=Asia/Seoul
+      - LC_ALL:en_US.UTF-8
+      # # 일반 사용자 계정 (선택)
+      # - MARIADB_USER: edu_user
+      # - MARIADB_PASSWORD: 1234
+    ports:
+      - 3306:3306
+    volumes:
+      # [호스트 경로]:[컨테이너 내부 경로] 혹은 [볼륨 이름]:[경로]
+      - mariadb_data:/var/lib/mysql
+      # - ./my-config:/etc/mysql/conf.d # 설정 파일 커스텀이 필요할 경우
+    networks:
+      - my_network
+
+volumes:
+  # 이름을 지정한 볼륨 (Docker가 내부적으로 관리하여 성능과 관리에 유리함)
+  mariadb_data:
+    driver: local
+
+networks:
+  my_network:
+    driver: bridge

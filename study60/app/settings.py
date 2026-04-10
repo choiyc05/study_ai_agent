@@ -6,6 +6,11 @@ class Settings(BaseSettings):
   graph_image_path: str = "images"
   movie_api_url: str = "https://www.omdbapi.com/"
   movie_api_key: str
+  db_host: str = "192.168.0.111"
+  db_port: int = 3306
+  db_user: str = "root"
+  db_password: str = "1234"
+
 
   model_config = SettingsConfigDict(
     env_file=".env",

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS BOARD | Futuristic Community</title>
+    <meta name="description" content="A high-performance, futuristic bulletin board interface for the next generation of digital communities.">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <div class="bg-glow"></div>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <span class="logo-text">NEXUS</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active" id="nav-home">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" id="nav-feed">
+                    <i class="fa-solid fa-layer-group"></i> <span>Community</span>
+                </a>
+                <a href="#" class="nav-link" id="nav-trending">
+                    <i class="fa-solid fa-fire"></i> <span>Trending</span>
+                </a>
+                <a href="#" class="nav-link" id="nav-messages">
+                    <i class="fa-solid fa-message"></i> <span>Messages</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User Avatar">
+                    </div>
+                    <div class="user-info">
+                        <p class="user-name">Guest Voyager</p>
+                        <p class="user-status">Online</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search transmissions...">
+                </div>
+                <div class="actions">
+                    <button class="btn-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <button class="btn-primary" id="write-btn">
+                        <i class="fa-solid fa-pen-nib"></i> <span>New Post</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <section class="welcome-section">
+                    <h1 id="page-title">Digital Frontier</h1>
+                    <p class="subtitle">Welcome to the Nexus. Here are the latest transmissions from the neural net.</p>
+                </section>
+
+                <div class="board-layout">
+                    <!-- Board List -->
+                    <div class="posts-container" id="posts-list">
+                        <!-- Posts will be injected here by JS -->
+                        <div class="skeleton-loader">
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Info -->
+                    <aside class="info-panel">
+                        <div class="glass-card popular-tags">
+                            <h3>Trending Tags</h3>
+                            <div class="tags">
+                                <span class="tag">#QuantumComputing</span>
+                                <span class="tag">#NeuralLink</span>
+                                <span class="tag">#Biotech</span>
+                                <span class="tag">#CyberSec</span>
+                            </div>
+                        </div>
+                        <div class="glass-card active-users">
+                            <h3>Active Logins</h3>
+                            <div class="user-list">
+                                <div class="mini-user">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aria" alt="Aria">
+                                    <span>Aria_Nova</span>
+                                </div>
+                                <div class="mini-user">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zero" alt="Zero">
+                                    <span>Zero_Cool</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content glass-card">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body">
+                <!-- Post details injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
