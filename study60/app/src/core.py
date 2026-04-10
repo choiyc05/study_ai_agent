@@ -23,7 +23,7 @@ class MoiveItem(BaseModel):
   Year: str = Field(description="영화 개봉 연도")
   Type: str = Field(description="영화 유형")
 
-class MoiveListResponse(BaseModel):
+class MovieListResponse(BaseModel):
   movies: list[MoiveItem] = Field(description="검색된 영화들의 리스트")
   count: int = Field(description="검색된 영화의 총 개수")
       

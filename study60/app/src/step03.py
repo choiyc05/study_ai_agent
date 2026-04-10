@@ -16,7 +16,7 @@ class MoiveItem(BaseModel):
   Year: str = Field(description="영화 개봉 연도")
   Type: str = Field(description="영화 유형")
 
-class MoiveListResponse(BaseModel):
+class MovieListResponse(BaseModel):
   movies: list[MoiveItem] = Field(description="검색된 영화들의 리스트")
   count: int = Field(description="검색된 영화의 총 개수")
       
@@ -98,7 +98,7 @@ async def chat(query: Query):
     result = await agent.ainvoke(inputs)
     raw_content = result["messages"][-1].content
     json_data = extract_json(raw_content)
-    validated_data = MoiveListResponse(**json_data)
+    validated_data = MovieListResponse(**json_data)
     return validated_data.model_dump()   
   except Exception as e:    
     logger.error(f"예상치 못한 오류: {str(e)}")
