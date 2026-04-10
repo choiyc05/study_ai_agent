@@ -1,20 +1,13 @@
+from langchain.tools import tool
+from src.core import Query, logger
 from settings import settings
 import httpx
 import json
 import re
-import logging
 from pydantic import BaseModel, Field
-from langchain.tools import tool
-from contextlib import asynccontextmanager
-from fastapi import FastAPI, Request
+from fastapi import APIRouter, HTTPException, Depends
 from langchain_ollama import ChatOllama
 from langgraph.prebuilt import create_react_agent
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-class Query(BaseModel):
-  input: str
 
 class MoiveItem(BaseModel):
   imdbID: str = Field(description="영화의 고유 ID")
@@ -73,29 +66,40 @@ def extract_json(text: str) -> dict:
     return json.loads(match.group(1))
   return json.loads(text)
 
-def get_app_state(request: Request):
-  return request.app.state
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
+def create_agent():
   try:
     llm = ChatOllama(
-      model=settings.ollama_model_name, 
-      base_url=settings.ollama_base_url, 
-      format="json",
-      temperature=0
+      model=settings.ollama_model_name,
+      base_url=settings.ollama_base_url
     )
-    schema = MovieListResponse.model_json_schema()
+    schema = MoiveListResponse.model_json_schema()
     system_message = (
-      f"당신은 영화 정보 전문가입니다. 반드시 search_movie_info 도구를 사용해 정보를 찾으세요. "
-      f"응답은 반드시 다음 JSON 스키마를 따르는 순수한 JSON 객체여야 합니다: {schema}. "
+      f"당신은 영화 정보 전문가입니다. 반드시 search_moive_info 도구를 사용하여 영화 정보를 검색해야 합니다."
+      f"응답은 반드시 다음 JSON schema를 따르는 순수한 JSON 객체여야 합니다: {schema} "
       f"설명이나 인사말 없이 JSON만 출력하세요."
     )
-    app.state.agent_executor = create_react_agent(llm, tools, prompt=system_message)
-    
-    logger.info("Agent Session Created Successfully!")
-    yield
+    return create_react_agent(llm, tools, prompt=system_message)
   except Exception as e:
-    logger.error(f"초기화 중 오류 발생: {e}")
-  finally:
-    logger.info("Finalizing shutdown...")
+    logger.error(f"에이전트 생성 중 오류: {str(e)}")
+    return None
+
+router = APIRouter(
+  prefix="/step03",
+  tags=["AI Agent와 외부 API 연동"],
+)
+
+@router.post("/chat")
+async def chat(query: Query):
+  try:
+    agent = create_agent()
+    if agent is None:
+      raise HTTPException(status_code=500, detail="에이전트 생성에 실패했습니다.")
+    inputs = {"messages": [("user", query.input)]}
+    result = await agent.ainvoke(inputs)
+    raw_content = result["messages"][-1].content
+    json_data = extract_json(raw_content)
+    validated_data = MoiveListResponse(**json_data)
+    return validated_data.model_dump()   
+  except Exception as e:    
+    logger.error(f"예상치 못한 오류: {str(e)}")
+    raise HTTPException(status_code=500, detail="서버 내부 오류가 발생했습니다.")
