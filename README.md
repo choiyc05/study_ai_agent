@@ -154,3 +154,13 @@ study56 - mcp맛보기
 ```bash
 study57 - langchain, langgraph 알아보기
 ```
+
+ - 4월 13일 (월요일)
+```bash
+study61 - multi agent 알아보기
+```
+
+ - 4월 15일 (수요일)
+```bash
+https://docs.github.com/ko/discussions/quickstart
+```
